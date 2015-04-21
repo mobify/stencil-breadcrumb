@@ -6,11 +6,21 @@
     {@c-spec__test describe=".c-breadcrumb"}
 
         {@c-spec__case expect="It should render a group of navigation links separated by a divider."}
-            {@c-breadcrumb /}
+            {@c-breadcrumb}
+                {@c-breadcrumb-item label="Home" url="#" /}
+                {@c-breadcrumb-item label="Homeware" url="#" /}
+                {@c-breadcrumb-item label="Kitchen" url="#" /}
+                {@c-breadcrumb-item label="Cooking & Baking" /}
+            {/c-breadcrumb}
         {/c-spec__case}
 
         {@c-spec__case expect="It should allow alternate styling for current link."}
-            {@c-breadcrumb /}
+            {@c-breadcrumb}
+                {@c-breadcrumb-item label="Home" url="#" /}
+                {@c-breadcrumb-item label="Homeware" url="#" /}
+                {@c-breadcrumb-item label="Kitchen" url="#" /}
+                {@c-breadcrumb-item label="Cooking & Baking" class="c--current" /}
+            {/c-breadcrumb}
         {/c-spec__case}
 
     {/c-spec__test}
