@@ -1,8 +1,5 @@
 <nav class="c-breadcrumb" role="navigation">
     <ol>
-        {@c-breadcrumb-item label="Home" url="#" /}
-        {@c-breadcrumb-item label="Homeware" url="#" /}
-        {@c-breadcrumb-item label="Kitchen" url="#" /}
-        {@c-breadcrumb-item label="Cooking & Baking" url="#" class="c--current" /}
+        {body}
     </ol>
 </nav>
