@@ -1,0 +1,17 @@
+<style>
+    /* Test-specific fixture styles go here. */
+</style>
+
+{@c-spec for="Breadcrumb" repository=repo}
+    {@c-spec__test describe=".c-breadcrumb"}
+
+        {@c-spec__case expect="It should render a group of navigation links separated by a divider."}
+            {@c-breadcrumb /}
+        {/c-spec__case}
+
+        {@c-spec__case expect="It should allow alternate styling for current link."}
+            {@c-breadcrumb /}
+        {/c-spec__case}
+
+    {/c-spec__test}
+{/c-spec}
