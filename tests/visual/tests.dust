@@ -5,21 +5,25 @@
 {@c-spec for="Breadcrumb" repository=repo}
     {@c-spec__test describe=".c-breadcrumb"}
 
-        {@c-spec__case expect="It should render a group of navigation links separated by a divider."}
+        {@c-spec__case expect="It should render a group of iterated navigation links separated by a divider. A class can be included to provide alternate styling of a link."}
+            {@c-breadcrumb items=breadcrumbs /}
+        {/c-spec__case}
+
+        {@c-spec__case expect="The links can be included manually."}
             {@c-breadcrumb}
-                {@c-breadcrumb-item label="Home" url="#" /}
-                {@c-breadcrumb-item label="Homeware" url="#" /}
-                {@c-breadcrumb-item label="Kitchen" url="#" /}
-                {@c-breadcrumb-item label="Cooking & Baking" /}
+                {@c-breadcrumb__item label="Home" url="#" /}
+                {@c-breadcrumb__item label="Homeware" url="#" /}
+                {@c-breadcrumb__item label="Kitchen" url="#" /}
+                {@c-breadcrumb__item label="Cooking & Baking" /}
             {/c-breadcrumb}
         {/c-spec__case}
 
-        {@c-spec__case expect="It should allow alternate styling for current link."}
+        {@c-spec__case expect="Alternate styling for a current link can also be included manually."}
             {@c-breadcrumb}
-                {@c-breadcrumb-item label="Home" url="#" /}
-                {@c-breadcrumb-item label="Homeware" url="#" /}
-                {@c-breadcrumb-item label="Kitchen" url="#" /}
-                {@c-breadcrumb-item label="Cooking & Baking" class="c--current" /}
+                {@c-breadcrumb__item label="Home" url="#" /}
+                {@c-breadcrumb__item label="Homeware" url="#" /}
+                {@c-breadcrumb__item label="Kitchen" url="#" /}
+                {@c-breadcrumb__item label="Cooking & Baking" class="c--current" /}
             {/c-breadcrumb}
         {/c-spec__case}
 

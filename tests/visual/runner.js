@@ -6,11 +6,28 @@ define(function(require) {
 
     // Load and compile this component’s dust templates:
     require('../../breadcrumb.template');
-    require('../../breadcrumb-item.template');
 
     // Define any context required for the tests:
     var context = {
-        repo: 'https://github.com/mobify/stencil-breadcrumb'
+        repo: 'https://github.com/mobify/stencil-breadcrumb',
+        breadcrumbs: [
+            {
+                label: "Home",
+                url: "#"
+            },
+            {
+                label: "Homeware",
+                url: "#"
+            },
+            {
+                label: "Kitchen",
+                url: "#"
+            },
+            {
+                label: "Cooking & Baking",
+                class: "c--current"
+            },
+        ]
     };
 
     // Render
