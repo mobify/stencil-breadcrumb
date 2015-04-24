@@ -12,20 +12,20 @@ define(function(require) {
         repo: 'https://github.com/mobify/stencil-breadcrumb',
         breadcrumbs: [
             {
-                label: "Home",
-                url: "#"
+                label: 'Home',
+                url: '#'
             },
             {
-                label: "Homeware",
-                url: "#"
+                label: 'Homeware',
+                url: '#'
             },
             {
-                label: "Kitchen",
-                url: "#"
+                label: 'Kitchen',
+                url: '#'
             },
             {
-                label: "Cooking & Baking",
-                class: "c--current"
+                label: 'Cooking & Baking',
+                class: 'c--current'
             },
         ]
     };
