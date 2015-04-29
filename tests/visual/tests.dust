@@ -11,18 +11,18 @@
 
         {@c-spec__case expect="The links can be included manually."}
             {@c-breadcrumb}
-                {@c-breadcrumb__item label="Home" url="#" /}
-                {@c-breadcrumb__item label="Homeware" url="#" /}
-                {@c-breadcrumb__item label="Kitchen" url="#" /}
+                {@c-breadcrumb__item label="Home" href="#" /}
+                {@c-breadcrumb__item label="Homeware" href="#" /}
+                {@c-breadcrumb__item label="Kitchen" href="#" /}
                 {@c-breadcrumb__item label="Cooking & Baking" /}
             {/c-breadcrumb}
         {/c-spec__case}
 
         {@c-spec__case expect="Alternate styling for a current link can also be included manually."}
             {@c-breadcrumb}
-                {@c-breadcrumb__item label="Home" url="#" /}
-                {@c-breadcrumb__item label="Homeware" url="#" /}
-                {@c-breadcrumb__item label="Kitchen" url="#" /}
+                {@c-breadcrumb__item label="Home" href="#" /}
+                {@c-breadcrumb__item label="Homeware" href="#" /}
+                {@c-breadcrumb__item label="Kitchen" href="#" /}
                 {@c-breadcrumb__item label="Cooking & Baking" class="c--current" /}
             {/c-breadcrumb}
         {/c-spec__case}

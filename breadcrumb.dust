@@ -1,11 +1,11 @@
 <nav class="c-breadcrumb" role="navigation">
-    <ol>
-    {?body}
-        {body}
-    {:else}
-        {#items}
-            {@c-breadcrumb__item label=label url=url class=class /}
-        {/items}
-    {/body}
+    <ol class="c-breadcrumb__inner">
+        {?body}
+            {body}
+        {:else}
+            {#items}
+                {@c-breadcrumb__item label=label href=href class=class /}
+            {/items}
+        {/body}
     </ol>
 </nav>

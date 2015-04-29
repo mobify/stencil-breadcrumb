@@ -13,15 +13,15 @@ define(function(require) {
         breadcrumbs: [
             {
                 label: 'Home',
-                url: '#'
+                href: '#'
             },
             {
                 label: 'Homeware',
-                url: '#'
+                href: '#'
             },
             {
                 label: 'Kitchen',
-                url: '#'
+                href: '#'
             },
             {
                 label: 'Cooking & Baking',

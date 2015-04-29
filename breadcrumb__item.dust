@@ -1,3 +1,3 @@
 <li class="c-breadcrumb__item {class}">
-    {?url}<a href="{url}">{/url}{label}{?url}</a>{/url}
+    {?href}<a href="{href}">{/href}{label}{?href}</a>{/href}
 </li>
