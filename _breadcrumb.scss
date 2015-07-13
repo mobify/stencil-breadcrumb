@@ -1,0 +1,30 @@
+// breadcrumb
+// ===
+
+// Configurable Variables
+// ---
+
+$breadcrumb__variable-name: true !default;
+
+
+// Dependencies
+// ---
+
+@import 'stencil-variables/variables';
+@import 'level/level';
+
+
+// Breadcrumb root
+// ---
+
+.c-breadcrumb {
+    // Your component styles go here
+}
+
+
+// Breadcrumb sub-component
+// ---
+
+.c-breadcrumb__sub-component {
+    // Your component styles go here
+}

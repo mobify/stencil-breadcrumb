@@ -1,0 +1,54 @@
+// Variables
+// ===
+//
+// - Names should be lowercase and dash-separated;
+// - Qualifiers should be added to the beginning of related variables: use
+//   `$small-font-size`, not `$font-size-small`;
+// - Numeric scales should use increments of 10; these numbers are arbitrary and
+//   should not map to actual values. If really necessary, additional values can
+//   be added in between, e.g. $neutral-15 between 10 and 20.
+
+
+// Paths
+// ---
+
+$asset-root: '../assets' !default; // Path to the built assets
+
+
+// Layout
+// ---
+
+$unit: 10px !default; // Basic unit for spacing and alignment
+$tap-size: 45px !default; // Standard tap-target size.
+
+
+// Typography
+// ---
+
+$font-family: 'Helvetica Neue', 'Roboto', sans-serif !default;
+$font-size: 14px !default;
+$line-height: 20px !default;
+
+
+// Color palette
+// ---
+
+$neutral-30: #e8e8e8 !default; // Background shade
+$neutral-40: #bbb !default; // Borders
+$neutral-50: #888 !default; // Icons & placeholder text
+$neutral-60: #555 !default; // Light text
+$neutral-70: #333 !default; // Text
+
+$accent-color: #16a085 !default; // Link & focus color
+$success-color: #27ae60 !default;
+$error-color: #c0392b !default;
+
+
+// Appearance
+// ---
+
+$border-color: $neutral-40 !default;
+$border-radius: 0 !default;
+
+$horizontal-input-padding: $unit !default;
+$vertical-input-padding: $unit !default;

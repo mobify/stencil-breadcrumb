@@ -1,0 +1,5 @@
+<article class="c-spec__test">
+    <h2 class="c-spec__describe">{describe}</h2>
+
+    {body}
+</article>

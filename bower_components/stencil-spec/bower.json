@@ -1,0 +1,34 @@
+{
+  "name": "stencil-spec",
+  "description": "Visual test container for other components",
+  "authors": [
+    "Mobify"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mobify/stencil-spec.git"
+  },
+  "keywords": [
+    "mobify",
+    "components",
+    "patterns"
+  ],
+  "license": "MIT",
+  "main": [
+    "spec.dust"
+  ],
+  "ignore": [
+    ".editorconfig",
+    ".gitignore",
+    "package.json",
+    "Gruntfile.js",
+    "Gemfile",
+    "Gemfile.lock",
+    "tests"
+  ],
+  "dependencies": {
+    "stencil-variables": "mobify/stencil-variables#*",
+    "level": ">=0.0.2"
+  },
+  "devDependencies": {}
+}

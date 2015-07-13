@@ -1,0 +1,5 @@
+<p class="c-spec__expect">{expect}</p>
+
+<div class="c-spec__run">
+    {body}
+</div>
