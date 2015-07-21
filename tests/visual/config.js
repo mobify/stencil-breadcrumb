@@ -1,13 +1,15 @@
-# http://editorconfig.org
-root = true
-
-[*]
-end_of_line = lf
-insert_final_newline = true
-trim_trailing_whitespace = true
-charset = utf-8
-indent_style = space
-indent_size = 4
-
-[*.md]
-trim_trailing_whitespace = false
+require.config({
+    paths: {
+        'dust-full': '../../node_modules/dustjs-linkedin/dist/dust-full',
+        'adaptivejs': '../../node_modules/adaptivejs',
+        '$': '../../node_modules/jquery/dist/jquery',
+    },
+    shim: {
+        'dust-full': {
+            'exports': 'dust'
+        },
+        '$': {
+            'exports': 'jQuery'
+        }
+    },
+});

@@ -7,5 +7,13 @@
         {@c-spec__case expect="Should have feature A"}
             {@c-breadcrumb items=items id=id/}
         {/c-spec__case}
+
+        {@c-spec__case expect="It should allow passing in an html string."}
+            {@c-breadcrumb element=selectMarkup /}
+        {/c-spec__case}
+
+        {@c-spec__case expect="It should allow passing in an html string."}
+            {@c-breadcrumb element=selectMarkup /}
+        {/c-spec__case}
     {/c-spec__test}
 {/c-spec}

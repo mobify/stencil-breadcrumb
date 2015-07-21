@@ -1,7 +1,7 @@
 require.config({
     paths: {
         'dust-full': '../../node_modules/dustjs-linkedin/dist/dust-full',
-        'adaptivejs': '../../node_modules/adaptivejs',
+        'adaptivejs': '../../node_modules/adaptivejs'
     },
     shim: {
         'dust-full': {
@@ -15,7 +15,7 @@ require([
     'adaptivejs/lib/dust-component-helper',
     'adaptivejs/lib/dust-component-sugar',
     '../../tmp/templates',
-    '../../breadcrumb-ui',
+    '../../breadcrumb-ui'
 ], function(
     dust,
     componentHelper,
@@ -35,8 +35,48 @@ require([
     var context = {
         repo: 'https://github.com/mobify/stencil-breadcrumb',
         selectMarkup: 'Insert example markup here',
-        items:[{'href':'/foo','label':'foo'},{'href':'/foo','label':'foo2'},{'href':'/foo','label':'foo3'},{'href':'/foo','label':'foo4'},{'href':'/foo','label':'foo5'},{'href':'/foo','label':'foo6'},{'href':'/foo','label':'foo7'},{'href':'/foo','label':'foo8'},{'href':'/foo','label':'foo9'},{'href':'/foo','label':'foo10'}],
-        id:23
+        items:
+            [{
+                'href':'/foo',
+                'label':'foo'
+            },
+            {
+                'href':'/foo',
+                'label':'foo2'
+            },
+            {
+                'href':'/foo',
+                'label':'foo3'
+            },
+            {
+                'href':'/foo',
+                'label':'foo4'
+            },
+            {
+                'href':'/foo',
+                'label':'foo5'
+            },
+            {
+                'href':'/foo',
+                'label':'foo6'
+            },
+            {
+                'href':'/foo',
+                'label':'foo7'
+            },
+            {
+                'href':'/foo',
+                'label':'foo8'
+            },
+            {
+                'href':'/foo',
+                'label':'foo9'
+            },
+            {
+                'href':'/foo',
+                'label':'foo10'
+            }],
+        id: 23
     };
 
     // Render
