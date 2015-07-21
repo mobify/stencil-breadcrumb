@@ -1,3 +1,15 @@
-<div {?id}id="{.}"{/id} class="c-breadcrumb {class}" {?role}role="{.}"{/role} data-adaptivejs-component="stencil-breadcrumb">
-    Component stuff goes here!
+<div {?id}id={id}{/id} class="c-breadcrumb {class}" {?role}role="{.}"{/role} data-adaptivejs-component="stencil-breadcrumb">
+    <nav class="c-breadcrumb" role="navigation">
+    <ol class="c-breadcrumb__inner">
+        {?element}
+            {element}
+        {:else}
+            {#items}
+                <li class="c-breadcrumb__item {class}" {?id}id={id}{/id}>
+                    {?href}<a href="{href}">{/href}{label}{?href}</a>{/href}
+                </li>
+            {/items}
+        {/element}
+    </ol>
+</nav>
 </div>

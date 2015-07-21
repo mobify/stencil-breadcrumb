@@ -218,3 +218,48 @@ th {
   color: rgba(0, 0, 0, 0.65);
   font-size: 13px;
 }
+
+.c-breadcrumb {
+  width: 100px;
+  overflow: hidden;
+  direction: rtl;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+          flex-direction: row;
+}
+.c-breadcrumb.c-breadcrumb__allow-overflow {
+  width: 100%;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .c-breadcrumb.c-breadcrumb__allow-overflow {
+    direction: rtl;
+  }
+}
+
+.c-breadcrumb__item {
+  display: inline-block;
+}
+.c-breadcrumb__item,
+.c-breadcrumb__item a {
+  text-decoration: none;
+}
+
+.c-breadcrumb__inner {
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+.c-breadcrumb__inner li {
+  display: inline;
+}
+.c-breadcrumb__inner::-webkit-scrollbar {
+  display: none;
+}
+
+.c-breadcrumb__item::after {
+  content: ">";
+  margin: 0 5px;
+}
+.c-breadcrumb__item:last-child::after {
+  display: none;
+}

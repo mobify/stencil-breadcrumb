@@ -10,6 +10,11 @@ define(function(require) {
 
     return schema({
         '?class': String,
-        '?id': String
+        '?element': [Object, Function, String],
+        '?id': String,
+        '?items': Array.of(Object)
+        '?scroll': Boolean,
+        '?truncate': Boolean,
+        '?width': String
     });
 });

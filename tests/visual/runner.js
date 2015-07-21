@@ -14,12 +14,14 @@ require([
     'dust-full',
     'adaptivejs/lib/dust-component-helper',
     'adaptivejs/lib/dust-component-sugar',
-    '../../tmp/templates'
+    '../../tmp/templates',
+    '../../breadcrumb-ui',
 ], function(
     dust,
     componentHelper,
     componentSugar,
-    templates
+    templates,
+    ui
 ) {
     var context;
 
@@ -33,6 +35,8 @@ require([
     var context = {
         repo: 'https://github.com/mobify/stencil-breadcrumb',
         selectMarkup: 'Insert example markup here',
+        items:[{'href':'/foo','label':'foo'},{'href':'/foo','label':'foo2'},{'href':'/foo','label':'foo3'},{'href':'/foo','label':'foo4'},{'href':'/foo','label':'foo5'},{'href':'/foo','label':'foo6'},{'href':'/foo','label':'foo7'},{'href':'/foo','label':'foo8'},{'href':'/foo','label':'foo9'},{'href':'/foo','label':'foo10'}],
+        id:23
     };
 
     // Render

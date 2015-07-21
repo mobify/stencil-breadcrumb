@@ -5,7 +5,7 @@
 {@c-spec for="Breadcrumb Component" repository=repo}
     {@c-spec__test describe=".c-breadcrumb"}
         {@c-spec__case expect="Should have feature A"}
-            {@c-breadcrumb /}
+            {@c-breadcrumb items=items id=id/}
         {/c-spec__case}
     {/c-spec__test}
 {/c-spec}
