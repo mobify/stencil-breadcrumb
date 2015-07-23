@@ -15,7 +15,7 @@ require([
     'adaptivejs/lib/dust-component-helper',
     'adaptivejs/lib/dust-component-sugar',
     '../../tmp/templates',
-    '../../breadcrumb-ui'
+    '../../breadcrumbs-ui'
 ], function(
     dust,
     componentHelper,
@@ -33,50 +33,26 @@ require([
 
     // Define any context required for the tests:
     var context = {
-        repo: 'https://github.com/mobify/stencil-breadcrumb',
+        repo: 'https://github.com/mobify/stencil-breadcrumbs',
         selectMarkup: 'Insert example markup here',
-        items:
-            [{
-                'href':'/foo',
-                'label':'foo'
+        items: [
+            {
+                'href':'/#',
+                'label':'Home'
             },
             {
-                'href':'/foo',
-                'label':'foo2'
+                'href':'/#',
+                'label':'Homeware'
             },
             {
-                'href':'/foo',
-                'label':'foo3'
+                'href':'/#',
+                'label':'Kitchen'
             },
             {
-                'href':'/foo',
-                'label':'foo4'
-            },
-            {
-                'href':'/foo',
-                'label':'foo5'
-            },
-            {
-                'href':'/foo',
-                'label':'foo6'
-            },
-            {
-                'href':'/foo',
-                'label':'foo7'
-            },
-            {
-                'href':'/foo',
-                'label':'foo8'
-            },
-            {
-                'href':'/foo',
-                'label':'foo9'
-            },
-            {
-                'href':'/foo',
-                'label':'foo10'
-            }],
-        id: 23
+                'href':'/#',
+                'label':'Cooking & Baking'
+            }
+        ]
     };
 
     // Render

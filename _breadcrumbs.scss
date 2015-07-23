@@ -1,0 +1,100 @@
+// breadcrumbs
+// ===
+
+// Configurable Variables
+// ---
+
+$breadcrumbs__active-style: bold !default;
+$breadcrumbs__divider-element: true !default;
+$breadcrumbs__divider-content: '>' !default;
+$breadcrumbs__space-caret: $unit*3;
+
+
+// Dependencies
+// ---
+
+@import 'stencil-variables/variables';
+@import 'level/level';
+
+
+// breadcrumbs root
+// ---
+//
+// 1. Read right to left so display current/active item
+
+.c-breadcrumbs {
+    overflow: hidden;
+
+    // direction: rtl; // 1
+}
+
+
+// breadcrumbs list element
+// ---
+//
+// 1. Disables scrollbar for webkit
+// 2. Reset list style
+
+.c-breadcrumbs__list {
+    overflow-x: scroll;
+    overflow-y: hidden;
+
+    margin: 0; // 2
+    padding: 0; // 2
+
+    list-style: none; // 2
+
+    &::-webkit-scrollbar {
+        display: none; // 1
+    }
+}
+
+
+// breadcrumbs item element
+// ---
+//
+// 1. Add divider - caret
+
+.c-breadcrumbs__item {
+    position: relative;
+
+    display: inline-block;
+
+    margin-right: $breadcrumbs__space-caret;
+
+    // Divier Element - Caret
+    // ---
+    //
+    // 1. Add caret
+    // 2. Remove caret to last item
+
+    @if ($breadcrumbs__divider-element) {
+        &::after {
+            content: $breadcrumbs__divider-content; // 1
+
+            position: absolute;
+            top: 50%;
+            right: -($breadcrumbs__space-caret/2);
+
+            transform: translateY(-50%);
+        }
+
+        &:last-child::after {
+            display: none; // 2
+        }
+    }
+}
+
+// Bradcrumb link element
+// ---
+//
+// 1. Algin content middle
+
+.c-breadcrumbs__link {
+    display: flex;
+
+    align-items: center; // 1
+    height: $tap-size;
+
+    text-decoration: none;
+}

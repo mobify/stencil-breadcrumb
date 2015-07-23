@@ -1,13 +1,13 @@
 {
-  "name": "stencil-breadcrumb",
+  "name": "stencil-breadcrumbs",
   "version": "0.0.0",
-  "description": "Breadcrumb component that truncates, scrolls and supports various styling options",
+  "description": "Breadcrumbs component that truncates, scrolls and supports various styling options",
   "authors": [
     "Mobify"
   ],
   "repository": {
     "type": "git",
-    "url": "http://github.com/mobify/stencil-breadcrumb.git"
+    "url": "http://github.com/mobify/stencil-breadcrumbs.git"
   },
   "license": "MIT",
   "dependencies": {

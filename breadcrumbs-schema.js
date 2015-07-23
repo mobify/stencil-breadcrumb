@@ -9,12 +9,12 @@ define(function(require) {
     var schema = require('js-schema');
 
     return schema({
+        '?modifier': String,
         '?class': String,
         '?element': [Object, Function, String],
         '?id': String,
         '?items': Array.of(Object)
         '?scroll': Boolean,
-        '?truncate': Boolean,
-        '?width': String
+        '?truncate': Boolean
     });
 });
