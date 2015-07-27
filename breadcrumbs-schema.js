@@ -9,7 +9,6 @@ define(function(require) {
     var schema = require('js-schema');
 
     return schema({
-        '?id': String,
         '?class': String,
         '?element': [Object, Function, String],
         '?items': Array.of(Object)

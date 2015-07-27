@@ -32,11 +32,10 @@ Output list elements in breadcrumbs component
 ```javascript
 var context = {
     myBreadcrumbsData: {
-        id: 'something',
         class: 'something',
         items: [
             {'href':'/#', 'label':'Home'},
-            {'href':'/#', 'label':'Homeware'}
+            {'href':'/#', 'label':'Homeware', 'isActive': true}
         ]
     }
 }
@@ -44,7 +43,7 @@ var context = {
 
 ```html
 {#myBreadcrumbsData}
-    {@c-breadcrumbs id=id class=class items=items /}
+    {@c-breadcrumbs class=class items=items /}
 {/myBreadcrumbsData}
 ```
 
@@ -54,10 +53,10 @@ var context = {
 
 Param name | Type          | Description
 :--------- | :------------ | :----------
-id         | String        | Sets the `id` attribute of the underlying select element
 class      | String        | Adds values to the `class` attribute of the root element
 element    | DOM, String   | Accepts the underlying select element as a DOM node or HTML string
 items      | Array of Obj  | Create list of items in array of object
+isActive   | Boolean       | Adds active class to active item
 
 ### Sass configurable variables
 

@@ -39,6 +39,7 @@ require([
     var context = {
         repo: 'https://github.com/mobify/stencil-breadcrumbs',
         breadcrumbsListMarkup: items,
+        class: 'foo',
         items: [
             {
                 'href':'/#',
@@ -46,7 +47,8 @@ require([
             },
             {
                 'href':'/#',
-                'label':'Homeware'
+                'label':'Homeware',
+                'class': 'foo'
             },
             {
                 'href':'/#',
@@ -54,7 +56,8 @@ require([
             },
             {
                 'href':'/#',
-                'label':'Cooking & Baking'
+                'label':'Cooking & Baking',
+                'isActive': true
             }
         ]
     };
