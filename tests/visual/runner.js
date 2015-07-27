@@ -38,7 +38,7 @@ require([
     // Define any context required for the tests:
     var context = {
         repo: 'https://github.com/mobify/stencil-breadcrumbs',
-        breadcrumbsMarkup: items,
+        breadcrumbsListMarkup: items,
         items: [
             {
                 'href':'/#',
