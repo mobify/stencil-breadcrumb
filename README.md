@@ -2,7 +2,7 @@
 
 Breadcrumb component that truncates, scrolls and supports various styling options
 
-[Link to demo](#)
+**View demo (coming soon)**
 
 ## Requirements
 
@@ -12,7 +12,10 @@ Breadcrumb component that truncates, scrolls and supports various styling option
 
 ## Installation
 
-Installation instructions. Be as brief as possible without leaving out necessary requirements.
+```shell
+cd my/adaptive/project
+grunt component:install:breadcrumbs
+```
 
 ## Usage
 
