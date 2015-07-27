@@ -1,100 +1,114 @@
-// breadcrumbs
+// Breadcrumbs
 // ===
+
 
 // Configurable Variables
 // ---
 
-$breadcrumbs__active-style: bold !default;
-$breadcrumbs__divider-element: true !default;
-$breadcrumbs__divider-content: '>' !default;
-$breadcrumbs__space-caret: $unit*3;
-
+$breadcrumbs__divider-content: '>' !default; // TO DO: include stencil icon
+$breadcrumbs__show-more-content: '...' !default; // TO DO: include stencil icon
 
 // Dependencies
 // ---
 
 @import 'stencil-variables/variables';
+@import 'spline/dist/utilities/hide-text';
+@import 'spline/dist/utilities/icon-font-replace';
 @import 'level/level';
 
 
-// breadcrumbs root
+// Breadcrumbs
 // ---
 //
-// 1. Read right to left so display current/active item
 
 .c-breadcrumbs {
-    overflow: hidden;
+    display: flex;
+    overflow-x: auto;
+    align-items: center;
+    min-height: $tap-size;
+    margin: 0;
+    padding: 0;
 
-    // direction: rtl; // 1
+    list-style: none;
+
+    -webkit-overflow-scrolling: touch;
 }
 
 
-// breadcrumbs list element
+// Breadcrumbs item
 // ---
 //
-// 1. Disables scrollbar for webkit
-// 2. Reset list style
-
-.c-breadcrumbs__list {
-    overflow-x: scroll;
-    overflow-y: hidden;
-
-    margin: 0; // 2
-    padding: 0; // 2
-
-    list-style: none; // 2
-
-    &::-webkit-scrollbar {
-        display: none; // 1
-    }
-}
-
-
-// breadcrumbs item element
-// ---
-//
-// 1. Add divider - caret
+// 1. Hide breacrumb item
 
 .c-breadcrumbs__item {
-    position: relative;
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
 
-    display: inline-block;
+    &[hidden] {
+        display: none; // 1
+    }
 
-    margin-right: $breadcrumbs__space-caret;
+    // Active style
+    // ---
 
-    // Divier Element - Caret
+    &.c--active {
+
+        .c-breadcrumbs__link {
+            font-weight: bold;
+        }
+    }
+
+    // Breadcrumbs divider
     // ---
     //
-    // 1. Add caret
-    // 2. Remove caret to last item
+    // 1. Divider content
 
-    @if ($breadcrumbs__divider-element) {
-        &::after {
+    + .c-breadcrumbs__item {
+        &::before {
             content: $breadcrumbs__divider-content; // 1
 
-            position: absolute;
-            top: 50%;
-            right: -($breadcrumbs__space-caret/2);
-
-            transform: translateY(-50%);
-        }
-
-        &:last-child::after {
-            display: none; // 2
+            display: inline-block;
         }
     }
 }
 
-// Bradcrumb link element
+
+// Breadcrumbs link
 // ---
 //
-// 1. Algin content middle
 
 .c-breadcrumbs__link {
     display: flex;
-
-    align-items: center; // 1
+    align-items: center;
     height: $tap-size;
+    padding: $unit;
 
     text-decoration: none;
+
+    // Breadcrumbs show more link
+    // ---
+    //
+    // 1. Add space between icon and carets
+    // 2. Remove padding so wont display text
+    // 3. Align icon to breadcrumb link
+    // 4. 'Show more' content
+
+    &.c--show-more {
+        @include icon-font-replace();
+
+        width: $tap-size;
+        height: $tap-size;
+        margin: 0 $unit; // 1
+        padding: 0; // 2
+        border: 0;
+
+        background: none;
+
+        line-height: $tap-size; // 3
+
+        &::before {
+            content: $breadcrumbs__show-more-content; // 4
+        }
+    }
 }

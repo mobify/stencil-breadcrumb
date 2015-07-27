@@ -11,12 +11,14 @@ require.config({
 });
 
 require([
+    '$',
     'dust-full',
     'adaptivejs/lib/dust-component-helper',
     'adaptivejs/lib/dust-component-sugar',
     '../../tmp/templates',
     '../../breadcrumbs-ui'
 ], function(
+    $,
     dust,
     componentHelper,
     componentSugar,
@@ -31,10 +33,12 @@ require([
         dust.helpers[name] = componentSugar.makeHelper(name);
     });
 
+    var items = '<li class="c-breadcrumbs__item"><a href="/#" class="c-breadcrumbs__link">Home</a></li><li class="c-breadcrumbs__item"><a href="/#" class="c-breadcrumbs__link">Homeware</a></li><li class="c-breadcrumbs__item"><a href="/#" class="c-breadcrumbs__link">Kitchen</a></li><li class="c-breadcrumbs__item"><a href="/#" class="c-breadcrumbs__link">Cooking & Baking</a></li><li class="c-breadcrumbs__item"><a href="/#" class="c-breadcrumbs__link">Outdoor Living</a></li><li class="c-breadcrumbs__item"><a href="/#" class="c-breadcrumbs__link">Tools & Hardware</a></li>';
+
     // Define any context required for the tests:
     var context = {
         repo: 'https://github.com/mobify/stencil-breadcrumbs',
-        selectMarkup: 'Insert example markup here',
+        breadcrumbsMarkup: items,
         items: [
             {
                 'href':'/#',
@@ -63,4 +67,7 @@ require([
             console.log(err);
         }
     });
+
+    // Ititalize component ui
+    ui.init();
 });
