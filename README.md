@@ -6,9 +6,7 @@ Breadcrumb component that truncates, scrolls and supports various styling option
 
 ## Requirements
 
-- Sass
-- AMD loader
-- Dust templating
+- AdaptiveJS 2.1 or greater
 
 ## Installation
 
