@@ -30,12 +30,16 @@ define([
                 // Add on click event to remove 'show more' item and display hidden items
                 $this.on('click', '.js-breadcrumb-show', function(){
                     var $hidden = $this.find('[hidden]').removeAttr('hidden');
-
-                    // Add focus to first hidden item
-                    $hidden.first().find('.c-breadcrumbs__link').focus();
+                    var scrollToRight = linkWidth - $this.width();
 
                     // Add 'hidden' attribute to 'show more' item
                     $('.js-breadcrumb-show').parent().attr('hidden', '');
+
+                    // Add focus to last item
+                    $this.last().find('.c-breadcrumbs__link').focus();
+
+                    // Scroll to right
+                    $this.scrollLeft(scrollToRight);
                 });
             }
         });
