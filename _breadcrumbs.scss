@@ -8,6 +8,7 @@
 $breadcrumbs__divider-content: '>' !default; // TO DO: include stencil icon
 $breadcrumbs__show-more-content: '...' !default; // TO DO: include stencil icon
 
+
 // Dependencies
 // ---
 
@@ -23,9 +24,8 @@ $breadcrumbs__show-more-content: '...' !default; // TO DO: include stencil icon
 
 .c-breadcrumbs {
     display: flex;
-    overflow-x: auto;
+    overflow: auto;
     align-items: center;
-    min-height: $tap-size;
     margin: 0;
     padding: 0;
 
@@ -38,24 +38,27 @@ $breadcrumbs__show-more-content: '...' !default; // TO DO: include stencil icon
 // Breadcrumbs item
 // ---
 //
-// 1. Hide breacrumb item
+// 1. Vertical align text center
+// 2. Hide breacrumb item
 
 .c-breadcrumbs__item {
-    display: flex;
-    align-items: center;
+    display: flex; // 1
+    align-items: center; // 1
     flex: 0 0 auto;
 
     &[hidden] {
-        display: none; // 1
+        display: none; // 2
     }
 
     // Active style
     // ---
+    //
+    // 1. Style active link in _breadcrumbs-theme.scss
 
     &.c--active {
 
         .c-breadcrumbs__link {
-            font-weight: bold;
+            @extend %c-breadcrumb__active-link; // 1
         }
     }
 

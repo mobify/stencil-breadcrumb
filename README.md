@@ -65,6 +65,10 @@ Variable name                     | Type      | Description
 $breadcrumbs__divider-content     | Boolean   | Give divider content
 $breadcrumbs__show-more-content   | Boolean   | Give 'show more' content
 
+## Theme Style
+
+Theme style in `breadcrumbs-theme.scss` file
+
 ## Development
 
 * run `npm install`

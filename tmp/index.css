@@ -223,11 +223,10 @@ th {
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
-  overflow-x: auto;
+  overflow: auto;
   -webkit-box-align: center;
   -webkit-align-items: center;
           align-items: center;
-  min-height: 45px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -247,9 +246,6 @@ th {
 }
 .c-breadcrumbs__item[hidden] {
   display: none;
-}
-.c-breadcrumbs__item.c--active .c-breadcrumbs__link {
-  font-weight: bold;
 }
 .c-breadcrumbs__item + .c-breadcrumbs__item::before {
   content: ">";
@@ -294,4 +290,8 @@ th {
 }
 .c-breadcrumbs__link.c--show-more::before {
   content: "...";
+}
+
+.c-breadcrumbs__item.c--active .c-breadcrumbs__link {
+  font-weight: bold;
 }
