@@ -5,10 +5,6 @@
 {@c-spec for="Breadcrumb Component" repository=repo}
     {@c-spec__test describe=".c-breadcrumbs"}
         {@c-spec__case expect="Normal"}
-            {@c-breadcrumbs items=items /}
-        {/c-spec__case}
-
-        {@c-spec__case expect="Alernate styling of active item"}
             {@c-breadcrumbs items=items class=class /}
         {/c-spec__case}
 
