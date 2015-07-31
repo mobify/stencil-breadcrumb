@@ -247,6 +247,9 @@ th {
 .c-breadcrumbs__item[hidden] {
   display: none;
 }
+.c-breadcrumbs__item.c--active .c-breadcrumbs__link {
+  font-weight: bold;
+}
 .c-breadcrumbs__item + .c-breadcrumbs__item::before {
   content: ">";
   display: inline-block;

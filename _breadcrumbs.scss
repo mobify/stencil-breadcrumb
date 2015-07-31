@@ -39,7 +39,7 @@ $breadcrumbs__show-more-content: '...' !default; // TO DO: include stencil icon
 // ---
 //
 // 1. Vertical align text center
-// 2. Hide breacrumb item
+// 2. Hide breacrumb item with hidden attribute
 
 .c-breadcrumbs__item {
     display: flex; // 1
@@ -57,7 +57,7 @@ $breadcrumbs__show-more-content: '...' !default; // TO DO: include stencil icon
     &.c--active {
 
         .c-breadcrumbs__link {
-
+            font-weight: bold;
         }
     }
 
