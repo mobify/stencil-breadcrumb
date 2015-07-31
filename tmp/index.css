@@ -291,7 +291,3 @@ th {
 .c-breadcrumbs__link.c--show-more::before {
   content: "...";
 }
-
-.c-breadcrumbs__item.c--active .c-breadcrumbs__link {
-  font-weight: bold;
-}

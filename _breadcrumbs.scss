@@ -53,12 +53,11 @@ $breadcrumbs__show-more-content: '...' !default; // TO DO: include stencil icon
     // Active style
     // ---
     //
-    // 1. Style active link in _breadcrumbs-theme.scss
 
     &.c--active {
 
         .c-breadcrumbs__link {
-            @extend %c-breadcrumb__active-link; // 1
+
         }
     }
 
