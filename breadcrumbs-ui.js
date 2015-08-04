@@ -9,7 +9,7 @@ define([
             var $this = $(this);
             var $links = $this.find('.c-breadcrumbs__item');
             var showMoreText = "Show more breadcrumbs items";
-            var $showMore = $('<li class="c-breadcrumbs__item"><button class="c-breadcrumbs__link c--show-more js-breadcrumb-show" type="button">' + showMoreText + '</button></li>');
+            var $showMore = $('<li class="c-breadcrumbs__item"><button class="c-breadcrumbs__link c--show-more" type="button">' + showMoreText + '</button></li>');
             var containerWidth = $this.width();
             var linkWidth = 0;
 
@@ -28,12 +28,12 @@ define([
                 );
 
                 // Add on click event to remove 'show more' item and display hidden items
-                $this.on('click', '.js-breadcrumb-show', function(){
+                $this.on('click', '.c-breadcrumbs__link.c--show-more', function(){
                     var $hidden = $this.find('[hidden]').removeAttr('hidden');
                     var scrollToRight = linkWidth - $this.width();
 
                     // Add 'hidden' attribute to 'show more' item
-                    $('.js-breadcrumb-show').parent().attr('hidden', '');
+                    $('.c-breadcrumbs__link.c--show-more').parent().attr('hidden', '');
 
                     // Add focus to last item
                     $this.last().find('.c-breadcrumbs__link').focus();
