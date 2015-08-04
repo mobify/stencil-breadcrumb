@@ -10,7 +10,7 @@ define(function(require) {
 
     return schema({
         '?class': String,
-        '?element': [Object, Function, String],
+        '?body': [Object, Function, String],
         '?items': Array.of(Object)
     });
 });

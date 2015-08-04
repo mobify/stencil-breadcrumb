@@ -62,10 +62,14 @@ require([
         ]
     };
 
-    // Render
+    // Render and initialize component ui.
     dust.render('tests', context, function(err, out) {
         if (!err) {
             document.querySelector('body').innerHTML = out;
+
+            $('[data-adaptivejs-component="stencil-breadcrumbs"]').each(function(i, el) {
+                ui.init($(el));
+            });
         } else {
             console.log(err);
         }

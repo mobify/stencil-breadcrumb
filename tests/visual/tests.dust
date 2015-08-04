@@ -9,7 +9,7 @@
         {/c-spec__case}
 
         {@c-spec__case expect="Varation with collapsed inner categories"}
-            {@c-breadcrumbs element=breadcrumbsListMarkup /}
+            {@c-breadcrumbs body=breadcrumbsListMarkup /}
         {/c-spec__case}
     {/c-spec__test}
 {/c-spec}

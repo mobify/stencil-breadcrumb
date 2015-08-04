@@ -1,11 +1,9 @@
 <ol class="c-breadcrumbs {class}" role="navigation" data-adaptivejs-component="stencil-breadcrumbs">
-    {?element}
-        {element|s}
+    {?body}
+        {body|s}
     {:else}
         {#items}
-            <li class="c-breadcrumbs__item {?isActive}c--active{/isActive}">
-                {?href}<a href="{href}" class="c-breadcrumbs__link">{/href}{label}{?href}</a>{/href}
-            </li>
+            {@c-breadcrumbs__item ctx=. /}
         {/items}
-    {/element}
+    {/body}
 </ol>

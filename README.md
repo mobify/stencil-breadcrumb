@@ -19,12 +19,12 @@ grunt component:install:breadcrumbs
 
 During installation, AdaptiveJS will register a Dust helper for the component which can be used in any template.
 
-### With a pre-existing breadcrumbs element
+### With a pre-existing breadcrumbs body
 
-Output list elements in breadcrumbs component
+Output list in breadcrumbs component
 
 ```html
-{@c-breadcrumbs element=breadcrumbsListMarkup /}
+{@c-breadcrumbs body=breadcrumbsListMarkup /}
 ```
 
 ### With options from data
@@ -54,7 +54,7 @@ var context = {
 Param name | Type          | Description
 :--------- | :------------ | :----------
 class      | String        | Adds values to the `class` attribute of the root element
-element    | DOM, String   | Accepts the underlying select element as a DOM node or HTML string
+body       | DOM, String   | Accepts the underlying list element as a DOM node or HTML string
 items      | Array of Obj  | Create list of items in array of object
 isActive   | Boolean       | Adds active class to active item
 

@@ -21,6 +21,7 @@ $breadcrumbs__show-more-content: '...' !default; // TO DO: include stencil icon
 // Breadcrumbs
 // ---
 //
+// 1. Removes scroll bar
 
 .c-breadcrumbs {
     display: flex;
@@ -32,6 +33,10 @@ $breadcrumbs__show-more-content: '...' !default; // TO DO: include stencil icon
     list-style: none;
 
     -webkit-overflow-scrolling: touch;
+
+    &::-webkit-scrollbar {
+        display: none; // 1
+    }
 }
 
 
@@ -99,8 +104,7 @@ $breadcrumbs__show-more-content: '...' !default; // TO DO: include stencil icon
     &.c--show-more {
         @include icon-font-replace();
 
-        width: $tap-size;
-        height: $tap-size;
+        min-width: $tap-size;
         margin: 0 $unit; // 1
         padding: 0; // 2
         border: 0;
