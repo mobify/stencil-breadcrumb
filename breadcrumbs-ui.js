@@ -12,37 +12,37 @@ define([
         var contentWidth = 0;
 
         $links.each(function() {
-            // link width of item with margin-left value
+            // Link width of item with margin-left value.
             var linkWidth = $(this).width() + parseInt( $(this).css('margin-left') );
 
             contentWidth = contentWidth + linkWidth;
         });
 
-        // If the items extend pass the container, truncate the items
+        // If the items extend pass the container, truncate the items.
         if (contentWidth > containerWidth) {
             this.$el.find('.c-breadcrumbs__item:not(:first-child):not(:last-child)').attr('hidden', '');
 
-            // Insert 'show more' item before last breadcrumb item
+            // Insert 'show more' item before last breadcrumb item.
             $showMore.insertBefore(
                 this.$el.find('.c-breadcrumbs__item').last()
             );
 
-            // Add on click event to remove 'show more' item and display hidden items
+            // Add on click event to remove 'show more' item and display hidden items.
             var onClickHandler = function(){
                 var $hidden = this.$el.find('[hidden]').removeAttr('hidden');
                 var scrollToRight = contentWidth - this.$el.width();
 
-                // Add 'hidden' attribute to 'show more' item
+                // Add 'hidden' attribute to 'show more' item.
                 $('.c-breadcrumbs__link.c--show-more').parent().attr('hidden', '');
 
-                // Add focus to last item
+                // Add focus to last item.
                 this.$el.last().find('.c-breadcrumbs__link').focus();
 
-                // Scroll to right
+                // Scroll to right.
                 this.$el.scrollLeft(scrollToRight);
             };
 
-            // use proxy event handler to execute with the current scope
+            // Use proxy event handler to execute with the current scope.
             this.$el.on('click', '.c-breadcrumbs__link.c--show-more', $.proxy(onClickHandler, this));
         }
     };
