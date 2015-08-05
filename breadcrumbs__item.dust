@@ -1,0 +1,7 @@
+<li class="c-breadcrumbs__item {?isActive}c--active{/isActive}">
+    {?href}
+        <a href="{href}" class="c-breadcrumbs__link">{label}</a>
+    {:else}
+        <span class="c-breadcrumbs__link">{label}</span>
+    {/href}
+</li>

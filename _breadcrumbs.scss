@@ -1,0 +1,120 @@
+// Breadcrumbs
+// ===
+
+
+// Configurable Variables
+// ---
+
+$breadcrumbs__divider-content: '>' !default; // TO DO: include stencil icon
+$breadcrumbs__show-more-content: '...' !default; // TO DO: include stencil icon
+
+
+// Dependencies
+// ---
+
+@import 'stencil-variables/variables';
+@import 'spline/dist/utilities/hide-text';
+@import 'spline/dist/utilities/icon-font-replace';
+@import 'level/level';
+
+
+// Breadcrumbs
+// ---
+//
+// 1. Removes scroll bar.
+
+.c-breadcrumbs {
+    display: flex;
+    overflow: auto;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    -webkit-overflow-scrolling: touch;
+
+    &::-webkit-scrollbar {
+        display: none; // 1
+    }
+}
+
+
+// Breadcrumbs item
+// ---
+//
+// 1. Vertical align text center.
+// 2. Hide breacrumb item with hidden attribute.
+
+.c-breadcrumbs__item {
+    display: flex; // 1
+    align-items: center; // 1
+    flex: 0 0 auto;
+
+    &[hidden] {
+        display: none; // 2
+    }
+
+    // Active style
+    // ---
+    //
+
+    &.c--active {
+
+        .c-breadcrumbs__link {
+            font-weight: bold;
+        }
+    }
+
+    // Breadcrumbs divider
+    // ---
+    //
+    // 1. Divider content.
+
+    + .c-breadcrumbs__item {
+        &::before {
+            content: $breadcrumbs__divider-content; // 1
+
+            display: inline-block;
+        }
+    }
+}
+
+
+// Breadcrumbs link
+// ---
+//
+
+.c-breadcrumbs__link {
+    display: flex;
+    align-items: center;
+    height: $tap-size;
+    padding: $unit;
+
+    text-decoration: none;
+
+    // Breadcrumbs show more link
+    // ---
+    //
+    // 1. Add space between icon and carets.
+    // 2. Remove padding so wont display text.
+    // 3. Align icon to breadcrumb link.
+    // 4. 'Show more' content.
+
+    &.c--show-more {
+        @include icon-font-replace();
+
+        min-width: $tap-size;
+        margin: 0 $unit; // 1
+        padding: 0; // 2
+        border: 0;
+
+        background: none;
+
+        line-height: $tap-size; // 3
+
+        &::before {
+            content: $breadcrumbs__show-more-content; // 4
+        }
+    }
+}
