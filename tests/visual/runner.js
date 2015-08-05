@@ -74,7 +74,4 @@ require([
             console.log(err);
         }
     });
-
-    // Ititalize component ui
-    ui.init();
 });
